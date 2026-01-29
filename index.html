@@ -1,82 +1,144 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anes BGD - مطور ويب مبتدئ</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>Aness Bgd | The Electric Coder</title>
+    <link rel="stylesheet" href="secure_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <meta name="description" content="Portfolio of Aness Bgd - Student of Electricity & Code">
 </head>
-<body>
+<body oncontextmenu="return false;">
+    <canvas id="bg-canvas"></canvas>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <header class="hero">
-        <div class="container">
-            <h1>أهلاً، أنا أنس! 🚀</h1>
-            <p class="bio-text">
-                BGD: 🏗️ Builder | 🎯 Growth | 💻 Developer
-            </p>
-            <p>مطور ويب مبتدئ - رحلة Full Stack تبدأ هنا بـ HTML, CSS, و JavaScript.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary-btn">شاهد مشاريعي</a>
-                <a href="#contact" class="btn secondary-btn">تواصل معي</a>
+    <nav>
+        <div class="logo">ANESS BGD</div>
+        <div class="nav-status"><span class="pulse"></span> ONLINE</div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-tag">// STUDENT OF ELECTRICITY & CODE</div>
+                <h1 class="hero-title">
+                    <div>WIRING</div>
+                    <div class="electric-text">DIGITAL</div>
+                    <div>SYSTEMS</div>
+                </h1>
+                <p class="hero-subtitle">
+                    Fusing electrical engineering principles with modern software development. 
+                    I build circuits, systems, and interfaces that bridge the physical and digital worlds.
+                </p>
             </div>
-        </div>
-    </header>
+            <div class="hero-visual">
+                <div class="pfp-container">
+                    <div class="pfp-aura"></div>
+                    <img src="pfp.png" alt="Aness Bgd" class="pfp-img">
+                </div>
+            </div>
+        </section>
 
-    <section id="projects" class="section projects-section">
-        <div class="container">
-            <h2>💼 أحدث المشاريع</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>آلة حاسبة تفاعلية</h3>
-                    <p>مشروع بسيط يوضح إتقان التلاعب بالـ DOM والمنطق في JavaScript.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">رابط المعاينة المباشرة</a>
-                        <a href="رابط مستودع المشروع على GitHub" target="_blank" class="github-link">الكود على GitHub</a>
+        <!-- TOOLS MARQUEE -->
+        <section class="skills-section">
+            <div class="marquee-container">
+                <span class="skill-item" data-brand="linux">LINUX</span>
+                <span class="skill-item" data-brand="git">GIT</span>
+                <span class="skill-item" data-brand="github">GITHUB</span>
+                <span class="skill-item" data-brand="vscode">VS CODE</span>
+                <span class="skill-item" data-brand="html">HTML5</span>
+                <span class="skill-item" data-brand="css">CSS3</span>
+                <span class="skill-item" data-brand="js">JS</span>
+                <span class="skill-item" data-brand="esp32">ESP32</span>
+                <span class="skill-item" data-brand="arduino">ARDUINO</span>
+                <span class="skill-item" data-brand="telegram">TELEGRAM</span>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects-section" id="projects">
+            <div class="projects-wrapper">
+                
+                <!-- ESP32: Fire Orange -->
+                <div class="project-card" style="--project-color: #ff5500;">
+                    <img src="project assest/ESP32 SMART HOME.png" class="project-visual-img">
+                    <div class="project-info">
+                        <span class="tag">IOT / HARDWARE</span>
+                        <h2 class="project-title">ESP32 SMART HOME</h2>
+                        <p>Centralized IoT hub for lighting and climate control via WebSockets.</p>
+                        <div class="project-tags">
+                            <span class="mini-tag">C++</span>
+                            <span class="mini-tag">JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>صفحة هبوط متجاوبة</h3>
-                    <p>تصميم متجاوب بالكامل باستخدام CSS Flexbox و Media Queries.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">رابط المعاينة المباشرة</a>
-                        <a href="رابط مستودع المشروع على GitHub" target="_blank" class="github-link">الكود على GitHub</a>
+                <!-- Telegram: App Blue -->
+                <div class="project-card" style="--project-color: #24A1DE;">
+                    <img src="project assest/TELEGRAM SYSTEM BOT.png" class="project-visual-img">
+                    <div class="project-info">
+                        <span class="tag">AUTOMATION</span>
+                        <h2 class="project-title">TELEGRAM BOT</h2>
+                        <p>Automated server monitoring and alert system integrated with Telegram API.</p>
+                        <div class="project-tags">
+                            <span class="mini-tag">Node.js</span>
+                            <span class="mini-tag">Linux</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <h2>🧠 مهاراتي التقنية</h2>
-            <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3 (Flexbox & Grid)</li>
-                <li>JavaScript (قيد التعلم)</li>
-                <li>تصميم متجاوب (Responsive Design)</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2>📧 تواصل معي</h2>
-            <p>متحمس للعمل على مشاريع جديدة والتعلم المستمر. لا تتردد في التواصل:</p>
-            <div class="contact-links">
-                <a href="https://github.com/YourUsername" target="_blank">GitHub</a> | 
-                <a href="mailto:your.email@example.com">البريد الإلكتروني</a> | 
+                <!-- Arduino: Teal/Green -->
+                <div class="project-card" style="--project-color: #00979D;">
+                    <img src="project assest/ARDUINO ROVER.png" class="project-visual-img">
+                    <div class="project-info">
+                        <span class="tag">ROBOTICS</span>
+                        <h2 class="project-title">ARDUINO ROVER</h2>
+                        <p>Obstacle-avoiding autonomous vehicle with ultrasonic sensory integration.</p>
+                        <div class="project-tags">
+                            <span class="mini-tag">Embedded C</span>
+                            <span class="mini-tag">Sensors</span>
+                        </div>
+                    </div>
                 </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Anes BGD. تم البناء بـ HTML و CSS.</p>
-        </div>
-    </footer>
+                <!-- Raspberry Pi: Berry Red -->
+                <div class="project-card" style="--project-color: #C51A4A;">
+                    <img src="project assest/RASPBERRY PI SERVER.png" class="project-visual-img">
+                    <div class="project-info">
+                        <span class="tag">SYSTEMS</span>
+                        <h2 class="project-title">RPI SERVER</h2>
+                        <p>Customized Linux-based home media and file server configuration.</p>
+                        <div class="project-tags">
+                            <span class="mini-tag">Linux</span>
+                            <span class="mini-tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact-section">
+            <div class="contact-wrapper">
+                <span class="hero-tag">GET IN TOUCH</span>
+                <h2>READY TO <span class="electric-text">CONNECT?</span></h2>
+                <a href="mailto:aness@example.com" class="contact-btn">INITIALIZE SIGNAL</a>
+                <div class="social-links">
+                    <a href="#">GITHUB</a>
+                    <a href="#">LINKEDIN</a>
+                    <a href="#">TWITTER</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="secure_cinematic.js"></script>
 </body>
 </html>
